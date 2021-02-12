@@ -4,12 +4,12 @@
   margin: 0;
 }
 .game {
-  width: 400px;
-  height: 500px;
+  width:  700px;
+  height: 800px;
   border: 1px solid black;
   margin: auto;
   background-image: url(img/background.gif);
-  background-size: 400px 500px;
+  background-size: 900px 1000px;
   overflow: hidden;
 }
 
