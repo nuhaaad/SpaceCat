@@ -1,0 +1,44 @@
+body {
+    margin:0px;
+
+}
+
+/* CSS für die Startseite */
+.button{
+    border: 2px solid #ffff00;
+
+    /* die Breite definieren*/
+    width: 260px;
+
+    /* die Schrift auf dem Button Zentrieren */
+        text-align: center;
+
+    /* Abstand zwischen Text und Rahmen vergrößern */
+    padding: 8px;
+
+    /* Hintergrundfarbe */
+    background-color: #ffff00;
+
+    /* Schriftfarbe ändern */
+        color: #0080ff;
+
+    /* die ecken des Rahmens sollen abgerundet werden */
+    border-radius: 10px;
+
+    position: absolute;
+}
+/* Um die Hintergrundfarbe zu ändern neue Klasse öffnen hover*/
+.button:hover {
+    background-color: #bf00ff;
+}
+#buttonstart {
+    top: 5%;
+}
+#buttonanleitung {
+    top: 15%;
+}
+
+#katze {
+    position: absolute;
+    width: 100%;
+}
