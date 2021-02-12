@@ -14,10 +14,10 @@
 }
 
 .character {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   background-image: url(img/character.png);
-  background-size: 50px 50px;
+  background-size: 150px 150px;
   position: absolute;
   top: 100px;
 
@@ -25,14 +25,14 @@
 
 .meteor {
   width: 50px;
-  height: 500px;
+  height: 800px;
   background-color: yellow;
   position: relative;
   left: 400px;
   animation: meteor 2s infinite linear;
 }
 @keyframes meteor {
-  0%{left: 400px}
+  0%{left: 700px}
   100%{left:-50px}
 
 }
