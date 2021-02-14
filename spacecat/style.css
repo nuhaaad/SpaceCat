@@ -5,20 +5,22 @@
 }
 
 .game {
-  width:  600px;
-  height: 200px;
-  border: 1px solid black;
+  width:  800px;
+  height: 600px;
+  border: 2px solid black;
   margin: auto;
+  background-image: url(img/background.gif);
+  background-size: 800px 600px;
 
 }
 
 .character {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   background-image: url(img/character.png);
-  background-size: 50px 50px;
+  background-size: 150px 150px;
   position: relative;
-  top: 150px;
+  top: 320px;
 
   animation: jump 0.3s linear;
 
@@ -48,17 +50,17 @@ animation: jump 0.3s linear //this is a special class so the player jumps more t
 
 .meteor {
   width: 20px;
-  height: 20px;
-  background-image: url(img/meteor.png);
+  height: 40px;
+  background-image: url(img/meteor2.png);
   background-size: 20px 40px;
   position: relative;
   top: 110px;
-  left: 580px;
-  animation: meteor 2s infinite linear;
+  left: 780px;
+  animation: meteor 1s infinite linear;
 }
 @keyframes meteor {
   0% {
-    left: 580px
+    left: 780px
   }
   100% {
     left: -20px
