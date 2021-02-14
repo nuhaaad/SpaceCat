@@ -1,36 +1,36 @@
-const character = document.getElementById("character";)
+const character = document.getElementById("character");
 const meteor = document.getElementById("meteor");
+const score = document.getElementById("score");
+
 // this function will make our character jump
 function jump(){
-if (character.classList != "jump") // with this it will not try to reset the animation over and over
-    character.classList.add("jump");
-
-setTimeout(function() {
-   character.classList.remove("jump");
-  }, 300); // this animation lasts for 300ms
- }
+  character.classList.add"jump-animation");
+  setTimeout(() => {
+   character.classList.remove("jump-animation");
+ }, 500);
 }
 
-// we gonna check if our character is still alive
-let isAlive = setInterval(function() {
-  // get current character y position
-  let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-  console.log(characterTop);
+document.addEventlistener("keypress", () => {
+  if (!character.classList.contains("jump-animation")) {
+  jump(); // for the keyboard to make the player jump
+ }
+});
 
-  // get current meteor x position
-  let meteorLeft = parseInt(window.getComputedStyle(meteor).getPropertyValue("left"));
-  console.log(meteorLeft);
+// detect collision / we gonna check if our character is stil alive
+setInterval(() => {
+  score.innerText++;
+  const dinoTop = parseInt(window.getComputedStyle(character)
+    .getPropertyValue("top"));
+    const meteorLeft = parseInt(window.getComputedStyle(meteor)
+      .getPropertyValue("left"));
+    if (meteorLeft <0) {
+      rock.style.dispaly = "none";
+    } else {
+      meteor.style.dispaly = ""; // we need this so the meteor comes back after it disapears
+    }
 
-  // detect collision
-  if (meteorLeft < 50 && meteorLeft > 0 && characterTop >= 140) {
-
-alert("GAME OVER!");
-  }
-
-}, 10);
-
-
-
-document.addEventlistener("keydown", function (event) {
-  jump();
-});  // this is for any keyboard - (it jumps only once )
+    if (meteorLeft < 50 && meteorLeft > 0 && characterTop > 150 ) {
+      alert("Your Score is:" + score.innerText + "\n\nPlay Again?");
+      location.reload();
+    }
+}, 50)

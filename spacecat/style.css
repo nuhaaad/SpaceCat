@@ -1,69 +1,69 @@
-*{
-
-  padding: 0;
-  margin: 0;
+#Score {
+  text-align: center;
+  text-decoration-color: white;
 }
 
 .game {
-  width:  800px;
-  height: 600px;
+  width:  600px;
+  height: 300px;
   border: 2px solid black;
   margin: auto;
   background-image: url(img/background.gif);
-  background-size: 800px 600px;
+  background-size: cover;
 
 }
 
 .character {
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   background-image: url(img/character.png);
-  background-size: 150px 150px;
-  position: relative;
-  top: 320px;
+  background-size: cover;
 
-  animation: jump 0.3s linear;
+  position: relative;
+  top: 225px;
+
 
 }
 
 .jump {
-animation: jump 0.3s linear //this is a special class so the player jumps more than one time
+animation: jump 0.5s; //this is a special class so the player jumps more than one time
 }
 
 @keyframes jump {
-  0% { // for the bottom
-    top: 150px;
+
+  // for the bottom
+  0% {
+    top: 225px;
   }
-  30% {
-    top: 130px;
+  50% {
+    top: 75px;
   }
-  50% { // we want to be at the top
-    top: 80px;
+
+  // we want to be at the top
+  75% {
+    top: 75px;
   }
-  80% {
-    top: 130;
-  }
-  100% { // get back to the ground
-    top: 150px;
+  100% {
+    top: 225;
   }
 }
 
 .meteor {
-  width: 20px;
-  height: 40px;
-  background-image: url(img/meteor2.png);
-  background-size: 20px 40px;
+  width: 50px;
+  height: 50px;
+  background-image: url(img/meteor.png);
+  background-size: cover;
   position: relative;
-  top: 110px;
-  left: 780px;
-  animation: meteor 1s infinite linear;
+  top: 175px;
+  left: 550px;
+  animation: meteor 1.33s infinite;
 }
 @keyframes meteor {
   0% {
-    left: 780px
+    left: 550px
   }
   100% {
-    left: -20px
+    left: -50px
   }
 
 }
